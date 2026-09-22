@@ -285,3 +285,25 @@ button,input,select{font:inherit}button{cursor:pointer}
   background:radial-gradient(ellipse at 77% 20%,rgba(200,244,253,.16),transparent 38%);
   filter:blur(10px);
 }
+
+
+/* Desktop portfolio header — reserve clear space around centered brand */
+@media(min-width:901px){
+  .portfolio-topbar{
+    padding-left:18px;
+    padding-right:18px;
+  }
+  .portfolio-nav{
+    margin-left:auto;
+    margin-right:14px;
+    padding-left:190px;
+  }
+  .portfolio-brand{
+    min-width:190px;
+    justify-content:center;
+    pointer-events:auto;
+  }
+  .portfolio-actions{
+    flex-shrink:0;
+  }
+}
