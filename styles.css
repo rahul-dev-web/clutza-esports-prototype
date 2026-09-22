@@ -84,3 +84,26 @@
   .dashboard .table{min-width:600px}
   .tournament-top .brand-button span{font-size:11px}
 }
+
+/* Organizer console: mobile shell + persistent bottom navigation */
+.organizer-mobile-header{display:none}
+@media(max-width:900px){
+  .organizer-mobile-header{
+    display:flex;
+    position:sticky;
+    top:0;
+    z-index:25;
+    height:58px;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 14px;
+    background:rgba(9,11,15,.96);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line);
+  }
+  .organizer-mobile-header .brand-button{font-size:12px}
+  .organizer-mobile-header .logo{width:34px;height:34px;border-radius:10px}
+  .organizer-mobile-header .btn{padding:8px 10px;font-size:11px}
+  .organizer-mobile-nav{display:flex}
+  .organizer-shell .dashboard{min-height:calc(100vh - 58px)}
+}
