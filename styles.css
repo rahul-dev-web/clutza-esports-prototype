@@ -70,3 +70,15 @@ button,input,select{font:inherit}button{cursor:pointer}
 /* Desktop portfolio header — keep centered brand clear of navigation */
 @media(min-width:901px){.portfolio-topbar{position:sticky}.portfolio-brand{z-index:2}.portfolio-nav{position:absolute;right:190px;margin:0;padding:0;z-index:3;display:flex;gap:1px}.portfolio-actions{position:absolute;right:18px;margin:0;z-index:3}}
 @media(min-width:901px) and (max-width:1050px){.portfolio-nav{right:18px}}
+
+/* Desktop portfolio brand — left aligned to avoid nav collision */
+@media(min-width:901px){
+  .portfolio-brand{
+    left:145px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+}
+@media(min-width:901px) and (max-width:1050px){
+  .portfolio-brand{left:125px;}
+}
