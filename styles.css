@@ -213,3 +213,50 @@ button,input,select{font:inherit}button{cursor:pointer}
  .portfolio-shell .roster-wall .player .role{font-size:7px}
  .portfolio-shell .roster-wall .player .muted{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 }
+
+
+/* Portfolio night scene — animated visual layer, portfolio only */
+.portfolio-shell{
+  background:
+    linear-gradient(180deg,rgba(2,8,16,.52),rgba(3,12,19,.72)),
+    url("/portfolio-night.svg") center top / cover fixed no-repeat;
+  background-color:#020812;
+}
+.portfolio-shell::before{
+  inset:0;
+  background:
+    radial-gradient(circle at 76% 19%,rgba(205,244,252,.12),transparent 9%),
+    linear-gradient(180deg,rgba(2,8,16,.16),rgba(2,10,17,.30) 58%,rgba(1,7,12,.70));
+  filter:none;
+  animation:portfolioNightDrift 22s ease-in-out infinite alternate;
+  opacity:.95;
+}
+.portfolio-shell::after{
+  left:-8vw;right:-8vw;bottom:-3vh;height:48vh;
+  background:
+    linear-gradient(180deg,transparent 0%,rgba(5,21,29,.20) 26%,rgba(2,9,15,.90) 100%),
+    linear-gradient(90deg,transparent 0%,rgba(128,216,235,.05) 50%,transparent 100%);
+  clip-path:none;
+  opacity:.72;
+  filter:blur(2px);
+  animation:portfolioWaterDrift 16s ease-in-out infinite alternate;
+}
+.portfolio-shell .portfolio-hero:after{
+  background:radial-gradient(ellipse at 76% 20%,rgba(190,239,249,.11),transparent 34%);
+  filter:blur(14px);
+}
+@keyframes portfolioNightDrift{
+  0%{transform:translate3d(-1%,0,0) scale(1.01)}
+  50%{transform:translate3d(.6%,-.5%,0) scale(1.025)}
+  100%{transform:translate3d(1.3%,.4%,0) scale(1.04)}
+}
+@keyframes portfolioWaterDrift{
+  0%{transform:translate3d(-1.5%,0,0) scaleX(1.01)}
+  100%{transform:translate3d(1.5%,-1%,0) scaleX(1.04)}
+}
+@media(max-width:900px){
+  .portfolio-shell{background-attachment:scroll;background-position:center top}
+}
+@media(prefers-reduced-motion:reduce){
+  .portfolio-shell::before,.portfolio-shell::after{animation:none}
+}
