@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#020812"/><stop offset=".55" stop-color="#071a2b"/><stop offset="1" stop-color="#0a3443"/></linearGradient>
+  <radialGradient id="moon"><stop stop-color="#effcff" stop-opacity=".95"/><stop offset=".55" stop-color="#bcecf7" stop-opacity=".32"/><stop offset="1" stop-color="#8ed8ec" stop-opacity="0"/></radialGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0a3544"/><stop offset="1" stop-color="#020b13"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="9"/></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="1240" cy="190" r="180" fill="url(#moon)"/>
+<circle cx="1240" cy="190" r="55" fill="#e8fbff" opacity=".92"/>
+<path d="M0 510 Q180 430 360 500 T720 485 T1080 500 T1440 455 T1600 480 V900 H0Z" fill="#061521"/>
+<path d="M0 575 Q190 505 390 560 T770 550 T1150 570 T1600 530 V900 H0Z" fill="#071d2a"/>
+<path d="M0 635 Q260 575 520 625 T1000 610 T1320 630 T1600 600 V900 H0Z" fill="url(#water)"/>
+<g opacity=".55" filter="url(#soft)">
+  <path d="M1100 255 Q1240 300 1380 255" stroke="#d4f7ff" stroke-width="5" fill="none"/>
+  <path d="M1125 285 Q1240 325 1355 285" stroke="#9bddea" stroke-width="3" fill="none"/>
+</g>
+<g fill="none" stroke="#8ed6e7" stroke-linecap="round">
+  <path d="M120 330 C330 270 420 365 620 305 S940 300 1130 345" stroke-width="4" opacity=".16">
+    <animate attributeName="d" dur="18s" repeatCount="indefinite" values="M120 330 C330 270 420 365 620 305 S940 300 1130 345;M80 350 C300 290 450 350 650 320 S960 280 1180 330;M120 330 C330 270 420 365 620 305 S940 300 1130 345"/>
+  </path>
+  <path d="M250 405 C430 360 520 430 720 390 S1010 380 1250 420" stroke-width="2" opacity=".13">
+    <animate attributeName="d" dur="14s" repeatCount="indefinite" values="M250 405 C430 360 520 430 720 390 S1010 380 1250 420;M210 390 C430 350 560 410 760 370 S1030 400 1290 390;M250 405 C430 360 520 430 720 390 S1010 380 1250 420"/>
+  </path>
+</g>
+<g opacity=".22">
+  <path d="M980 650 Q1160 630 1350 655 T1600 645" stroke="#b7effa" stroke-width="3" fill="none"/>
+  <path d="M1040 680 Q1210 660 1400 685 T1600 675" stroke="#7dc9dd" stroke-width="2" fill="none"/>
+</g>
+<rect width="1600" height="900" fill="url(#sky)" opacity=".04"/>
+</svg>
