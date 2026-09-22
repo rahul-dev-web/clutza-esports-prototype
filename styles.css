@@ -134,3 +134,27 @@ button,input,select{font:inherit}button{cursor:pointer}
  .dash-main .section-head{align-items:flex-start;gap:10px}.dash-main .section-head .btn{padding:8px 9px;font-size:11px}
  .dashboard .table{min-width:600px}.tournament-top .brand-button span{font-size:11px}.tournament-subbar span{display:none}
 }
+/* Portfolio header — centered brand card */
+.portfolio-topbar{position:sticky;top:14px;width:min(1180px,calc(100% - 28px));height:64px;margin:14px auto 0;border:1px solid rgba(169,229,247,.18);border-radius:14px;padding:0 10px;background:rgba(5,15,22,.76);box-shadow:0 14px 45px rgba(0,0,0,.18)}
+.portfolio-brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;padding:7px 15px;border:1px solid rgba(169,229,247,.16);border-radius:11px;background:rgba(14,32,42,.78);box-shadow:0 5px 22px rgba(0,0,0,.14);transition:border-color .2s,background .2s,box-shadow .2s}
+.portfolio-brand:hover{background:rgba(18,40,52,.9);border-color:rgba(169,229,247,.30);box-shadow:0 7px 28px rgba(101,199,231,.10)}
+.portfolio-brand .logo{width:31px;height:31px;border-radius:8px}
+.portfolio-nav-left{display:flex;margin-right:auto}.portfolio-nav-right{display:flex}
+.portfolio-actions{display:flex;align-items:center;gap:7px;margin-left:auto}
+@media(max-width:1100px){
+ .portfolio-nav-right{display:none}
+ .portfolio-actions .tournament-link{display:none}
+}
+@media(max-width:900px){
+ .portfolio-topbar{top:8px;margin-top:8px;width:calc(100% - 16px);height:56px;border-radius:13px;padding:0 7px}
+ .portfolio-brand{padding:5px 11px;border-radius:10px}
+ .portfolio-brand .logo{width:29px;height:29px}
+ .portfolio-brand span{font-size:11px}
+ .portfolio-nav-left{display:none}
+}
+@media(max-width:560px){
+ .portfolio-topbar{height:54px}
+ .portfolio-brand{padding:4px 9px}
+ .portfolio-brand .logo{width:27px;height:27px}
+ .portfolio-brand i{font-size:.68em}
+}
