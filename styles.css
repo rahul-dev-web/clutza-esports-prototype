@@ -188,3 +188,28 @@ button,input,select{font:inherit}button{cursor:pointer}
  .portfolio-actions .cta-mobile{display:inline}
 }
 @media(min-width:561px){.portfolio-actions .cta-mobile{display:none}}
+/* Home roster — compact preview, detailed roster stays on Team */
+@media(min-width:901px){
+ .portfolio-shell .roster-wall{grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+ .portfolio-shell .roster-wall .player{min-height:150px;padding:13px}
+ .portfolio-shell .roster-wall .player .number{font-size:54px}
+ .portfolio-shell .roster-wall .player h3{font-size:17px;margin:4px 0}
+ .portfolio-shell .roster-wall .player .role{font-size:8px}
+ .portfolio-shell .roster-wall .player .muted{font-size:10px}
+}
+@media(max-width:900px){
+ .portfolio-shell .roster-wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .portfolio-shell .roster-wall .player{min-height:135px;padding:13px}
+ .portfolio-shell .roster-wall .player .number{font-size:50px}
+ .portfolio-shell .roster-wall .player h3{font-size:16px;margin:4px 0}
+ .portfolio-shell .roster-wall .player .role{font-size:8px}
+ .portfolio-shell .roster-wall .player .muted{font-size:10px}
+}
+@media(max-width:560px){
+ .portfolio-shell .roster-wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .portfolio-shell .roster-wall .player{min-height:112px;padding:10px}
+ .portfolio-shell .roster-wall .player .number{font-size:40px;top:0}
+ .portfolio-shell .roster-wall .player h3{font-size:14px;margin:3px 0}
+ .portfolio-shell .roster-wall .player .role{font-size:7px}
+ .portfolio-shell .roster-wall .player .muted{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
