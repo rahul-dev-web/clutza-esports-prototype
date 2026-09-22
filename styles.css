@@ -177,6 +177,14 @@ button,input,select{font:inherit}button{cursor:pointer}
  .portfolio-nav{display:none}.portfolio-actions .tournament-link{display:block}
 }
 @media(max-width:560px){
- .portfolio-topbar{height:54px}.portfolio-logo .logo{width:28px;height:28px}.portfolio-brand{padding:5px 10px}.portfolio-brand span{font-size:11px}
- .portfolio-actions .tournament-link{font-size:9px;padding:7px 8px;max-width:105px;white-space:normal;line-height:1.1;text-align:center}
+ .portfolio-topbar{height:54px;padding:0 6px}
+ .portfolio-logo{width:40px;display:grid;place-items:center;padding:4px 5px}
+ .portfolio-logo .logo{width:28px;height:28px}
+ .portfolio-brand{padding:5px 9px;max-width:126px;white-space:nowrap}
+ .portfolio-brand span{font-size:10px}
+ .portfolio-actions{width:76px;justify-content:flex-end}
+ .portfolio-actions .tournament-link{width:76px;font-size:9px;padding:7px 6px;white-space:nowrap;line-height:1.1;text-align:center}
+ .portfolio-actions .cta-full{display:none}
+ .portfolio-actions .cta-mobile{display:inline}
 }
+@media(min-width:561px){.portfolio-actions .cta-mobile{display:none}}
